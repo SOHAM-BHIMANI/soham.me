@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soham Bhimani | Web Developer & Designer</title>
+  <meta name="description" content="Soham Bhimani - Web Developer & Designer Portfolio">
+  <meta name="keywords" content="web developer, designer, frontend, HTML, CSS, JavaScript, Python">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;font-family:'Poppins',sans-serif}
+    body{background:#050505;color:#e9e9e9;overflow-y:auto}
+    header{position:fixed;left:0;top:0;width:100%;padding:18px 80px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(0,0,0,0.6));backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,0.03);z-index:50}
+    header h1{color:#fff;font-size:20px;letter-spacing:1px}
+    nav a{color:#a8a8a8;text-decoration:none;margin-left:22px;font-weight:600;transition:color .18s}
+    nav a:hover{color:#fff}
+
+    main{max-width:1100px;margin:120px auto 80px;padding:0 40px}
+
+    /* HERO */
+    .hero{display:flex;gap:40px;align-items:center}
+    .hero-left{flex:1}
+    .greeting{color:#9aa0a6;font-weight:500;margin-bottom:8px}
+    .name{font-size:56px;line-height:1;letter-spacing:-1px;font-weight:800;color:#fff}
+    .title{margin-top:10px;color:#9fb3ff;font-weight:600}
+    .desc{margin-top:20px;color:#bdbdbd;max-width:680px;font-size:16px}
+
+    /* typing */
+    .typing {display:inline-block;border-right:2px solid #9fb3ff;padding-right:6px;margin-left:8px}
+
+    /* CTA */
+    .cta{margin-top:28px;display:flex;gap:14px}
+    .btn{background:transparent;border:1px solid #2f6ef8;color:#dfe9ff;padding:10px 18px;border-radius:28px;text-decoration:none;font-weight:600;transition:all .18s}
+    .btn.primary{background:linear-gradient(90deg,#1f6ef8,#4aa8ff);border:0;color:#fff}
+    .btn:hover{transform:translateY(-4px)}
+
+    /* RIGHT CARD */
+    .card{width:360px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);padding:22px;border-radius:14px}
+    .avatar{width:100%;height:170px;border-radius:10px;background:linear-gradient(135deg,#111428,#0b0b12);display:flex;align-items:center;justify-content:center;color:#9fb3ff;font-weight:700;font-size:14px}
+    .card h4{margin-top:14px;color:#fff}
+    .skills{margin-top:12px;display:flex;flex-wrap:wrap;gap:8px}
+    .skill{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.02);font-size:13px;color:#d0d6ff}
+
+    /* SECTIONS */
+    section.block{margin-top:40px;padding:26px;background:#0a0a0a;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+    section.block h3{color:#cfe1ff;margin-bottom:12px}
+    .projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .project{background:#080808;padding:18px;border-radius:10px;border:1px solid rgba(255,255,255,0.02);transition:transform .18s,box-shadow .18s}
+    .project:hover{transform:translateY(-6px);box-shadow:0 10px 30px rgba(34,119,255,0.06)}
+    .project h4{color:#fff;margin-bottom:8px}
+    .project p{color:#a7a7a7;font-size:14px}
+    .project .tag{margin-top:12px;display:inline-block;background:rgba(79,129,255,0.09);color:#7fb0ff;padding:6px 10px;border-radius:999px;font-size:13px}
+
+    /* CONTACT & SOCIALS */
+    .socials{display:flex;gap:12px;margin-top:10px}
+    .socials a{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:8px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.02);text-decoration:none;color:#9fb3ff}
+
+    footer{margin-top:50px;padding:30px 0;color:#808080;text-align:center;font-size:14px}
+
+    /* small utility */
+    .muted{color:#9b9b9b}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Soham Bhimani</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="hero-left">
+        <div class="greeting">Hello, I’m</div>
+        <div class="name">Soham Bhimani
+          <span class="typing" id="typing"></span>
+        </div>
+        <div class="title">Web Developer & Designer</div>
+        <p class="desc">I design and build high-quality websites and applications with a focus on performance, clarity, and delightful interactions. I enjoy transforming ideas into clean, maintainable code.</p>
+
+        <div class="cta">
+          <a class="btn primary" href="#contact">Hire Me</a>
+          <a class="btn" href="#projects">See Projects</a>
+        </div>
+
+        <div style="margin-top:22px">
+          <span class="muted">Location:</span> Surat, India · <span class="muted">Available:</span> Freelance · Full-time
+        </div>
+
+      </div>
+
+      <aside class="card">
+        <div class="avatar">Soham Bhimani</div>
+        <h4>Designer & Developer</h4>
+        <div class="skills">
+          <div class="skill">HTML</div>
+          <div class="skill">CSS</div>
+          <div class="skill">Java</div>
+          <div class="skill">Figma</div>
+          <div class="skill">Python</div>
+          <div class="skill">MySQL</div>
+        </div>
+
+        <div style="margin-top:18px">
+          <div class="muted">Contact</div>
+          <div style="margin-top:8px;font-weight:600">sohambhimani2911@gmail.com</div>
+
+          <div class="socials">
+            <a href="https://github.com/SOHAM-BHIMANI" title="GitHub" aria-label="GitHub">G</a>
+            <a href="https://www.linkedin.com/in/soham-bhimani/" title="LinkedIn" aria-label="LinkedIn">in</a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sohambhimani2911@gmail.com" target="_blank" title="Email" aria-label="Email">✉</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <section id="about" class="block">
+      <h3>About</h3>
+      <p class="muted">I’m Soham — a web developer focused on clean design and fast user experiences. I build interfaces that are both attractive and easy to use. My strengths are problem solving, front-end development, and delivering polished products.</p>
+    </section>
+
+    <section id="projects" class="block">
+      <h3>Selected Projects</h3>
+      <div class="projects-grid">
+        <div class="project">
+          <h4>Portfolio Website</h4>
+          <p>A professional portfolio showcasing projects, case studies, and contact options. Built with HTML/CSS and subtle animations.</p>
+          <div class="tag">Web</div>
+        </div>
+
+        <div class="project">
+          <h4>Task Manager App</h4>
+          <p>A productivity app that helps users organize tasks with priorities, deadlines, and easy filtering.</p>
+          <div class="tag">React</div>
+        </div>
+
+        <div class="project">
+          <h4>Landing Page</h4>
+          <p>A modern product landing page with clear CTAs and conversion-focused design.</p>
+          <div class="tag">Design</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="block">
+      <h3>Contact</h3>
+      <p class="muted">Interested in working together? Send me a message — I usually reply within a day.</p>
+      <div style="margin-top:14px">
+        <a class="btn primary" href="https://mail.google.com/mail/?view=cm&fs=1&to=sohambhimani2911@gmail.com" target="_blank">Email Soham</a>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Soham Bhimani · Built with HTML & CSS
+    </footer>
+  </main>
+
+  <script>
+    // Typing animation (simple)
+    const words = ["Web Developer","Designer","Frontend Engineer","Problem Solver"];
+    const el = document.getElementById('typing');
+    let i = 0, j = 0, forward = true;
+
+    function type(){
+      if(!el) return;
+      const word = words[i];
+      if(forward){
+        el.textContent = word.slice(0, j+1);
+        j++;
+        if(j === word.length){forward = false;setTimeout(type,1200);return}
+      } else {
+        el.textContent = word.slice(0, j-1);
+        j--;
+        if(j === 0){forward = true;i=(i+1)%words.length}
+      }
+      setTimeout(type, forward ? 120 : 40);
+    }
+    type();
+
+    // year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
